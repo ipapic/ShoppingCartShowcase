@@ -1,0 +1,36 @@
+#cart {
+  margin: 30px auto;
+  .row.first {
+    margin-bottom: 20px;
+  }
+
+  .row.last {
+    margin-top: 20px;
+  }
+
+  .row {
+    margin: 5px 0px
+  }
+
+  .row {
+    line-height: 40px;
+  }
+  .product-thumb {
+    height: 40px;
+    width: 40px;
+  }
+  .cart-total {
+    text-decoration: underline;
+  }
+  .glyphicon {
+    margin: 0px 10px 5px;
+    background: transparent;
+    border: none;
+  }
+
+  .remove .glyphicon {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="home-sidebar">
+  <div class="title">Choose category:</div>
+
+  <div class="category-name" ng-class="{'active': category.id == vm.activeCategory }"
+       ng-repeat="category in vm.categories"
+       ng-click="vm.browseCategory(category.id)">{{category.name}}
+  </div>
+</div>

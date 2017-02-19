@@ -1,0 +1,33 @@
+<div id="cart">
+  <div class="container">
+    <div class="row first">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-4">Name</div>
+      <div class="col-xs-2">Price (USD)</div>
+      <div class="col-xs-2">Quantity</div>
+      <div class="col-xs-2">Total (USD)</div>
+      <div class="col-xs-1"></div>
+    </div>
+    <div ng-repeat="product in vm.products" class="row">
+      <div class="col-xs-1">
+        <div class="product-thumb" ng-style="{'background-image':'url('+product.thumb+')'}"></div>
+      </div>
+      <div class="col-xs-4">{{product.name}}</div>
+      <div class="col-xs-2">{{product.price}}</div>
+      <div class="col-xs-2">
+        <button ng-disabled="!(vm.quantity>1)" ng-click="vm.changeQty($index)"
+                class="glyphicon glyphicon-minus"></button>
+        {{vm.cart[$index].quantity}}
+        <button ng-click="vm.changeQty(true, $index)" class="glyphicon glyphicon-plus"></button>
+      </div>
+      <div class="col-xs-2">{{vm.totals[$index]|number: 0}}</div>
+      <div class="col-xs-1 remove"><span ng-click="vm.removeProduct(product.id)"
+                                         class="glyphicon glyphicon-trash"></span></div>
+    </div>
+    <div class="row last">
+      <div class="col-xs-9"></div>
+      <div class="col-xs-2 cart-total">{{vm.cartTotal | number: 0}}</div>
+      <div class="col-xs-1"></div>
+    </div>
+  </div>
+</div>

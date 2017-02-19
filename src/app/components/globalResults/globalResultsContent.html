@@ -1,0 +1,14 @@
+<div class="paging shadow-s">
+  <ul uib-pagination total-items="vm.pagingData.totalCount"
+      ng-model="vm.pagingData.pageNumber"
+      ng-change="vm.onPageChange()"
+      max-size="5"
+      class="pagination-sm"
+      boundary-link-numbers="true"
+      rotate="false"></ul>
+</div>
+
+<div class="products-container">
+  <product-card product=product ng-repeat="product in vm.products">
+  </product-card>
+</div>

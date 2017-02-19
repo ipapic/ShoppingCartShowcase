@@ -1,0 +1,44 @@
+#mainHeader {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 0px 20px;
+  align-items: center;
+  .logo {
+    flex: 0 0 auto;
+    font-size: 1.3em;
+    color: #5c5c5c;
+    > span {
+      &.accent {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #337ab7;
+      }
+    }
+  }
+  .spacer {
+    flex: 1;
+  }
+  > div {
+    padding: 0px 10px;
+  }
+  .search-input {
+    flex: 0 0 150px;
+  }
+  .search-button {
+    margin: 0px 10px 3px;
+    font-size: 1.2em;
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    .glyphicon {
+      font-size: 1.5em;
+      margin-bottom: 2px;
+    }
+    .cart-label {
+      margin: 0px 7px 0px 10px;
+    }
+  }
+}
+

@@ -1,0 +1,42 @@
+.home-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 20px;
+  align-content: flex-start;
+  width: 100%;
+  overflow: auto;
+  font-size: 1em;
+  .active.category-name {
+    color: #0378cd;
+  }
+  .title {
+    font-size: 1.2em;
+    margin: 10px 0px 20px;
+  }
+  .category-name {
+    margin: 2px 0px;
+    font-weight: bold;
+    color: #5e626a;
+    font-size: 0.95em;
+  }
+}
+
+.home-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .carousel-container {
+    height: 305px;
+    width: 100%;
+    margin: 10px 10px 30px;
+  }
+  .title {
+    font-size: 1.3em;
+    color: #988582;
+    margin: 25px 150px 0px;
+    text-align: end;
+    &.featured {
+      color: #2782c1;
+    }
+  }
+}

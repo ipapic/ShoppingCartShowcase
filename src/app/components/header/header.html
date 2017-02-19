@@ -1,0 +1,14 @@
+<div id="mainHeader">
+
+  <div class="logo" ng-click="vm.openHome()"><span class="accent">Shopping Cart</span> <span>Showcase</span></div>
+  <div class="spacer"></div>
+  <input class="search-input form-control" ng-model="vm.searchInput" placeholder="Search all..."/>
+  <span class="search-button glyphicon glyphicon-search" ng-click="vm.search()"></span>
+
+  <div class="cart">
+    <span class="cart-label">
+    <a ui-sref="app.cart">cart: ({{vm.localStorageService.cart.length}})</a>
+    </span>
+    <span class="glyphicon glyphicon-shopping-cart"></span>
+  </div>
+</div>

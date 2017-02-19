@@ -1,0 +1,24 @@
+<div class="product-modal">
+
+  <div class="modal-header">
+
+    <div class="modal-title">Product Details:</div>
+    <div ng-click="vm.close()" class="modal-close glyphicon glyphicon-remove"></div>
+  </div>
+  <div class="modal-body">
+    <div class="product-image" ng-style="{'background-image':'url('+vm.product.picture+')'}"></div>
+    <div class="product-data">
+      <div class="product-name">{{vm.product.name}}</div>
+      <div class="product-desc">{{vm.product.desc}}</div>
+      <div class="product-price">{{vm.product.price}} USD</div>
+      <div class="quantity">
+        <span class="quantity-label">Quantity:</span>
+        <button ng-disabled="!(vm.quantity>1)" ng-click="vm.changeQty()" class="glyphicon glyphicon-minus"></button>
+        <input ng-model="vm.quantity" class="quantity-input form-control" type="number"/>
+
+        <button ng-click="vm.changeQty(true)" class="glyphicon glyphicon-plus"></button>
+        <button class="btn btn-success" ng-click="vm.addToCart()">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

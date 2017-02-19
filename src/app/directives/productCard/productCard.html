@@ -1,0 +1,9 @@
+<div class="product-card">
+  <div class="thumbnail shadow-s">
+    <div class="product-thumb" ng-style="{'background-image':'url('+vm.product.thumb+')'}"></div>
+    <h4 class="product-title">{{vm.product.name}}</h4>
+
+    <div class="price">{{vm.product.price}} USD</div>
+    <div ng-click="vm.openProductModal()" class="open-product  btn btn-primary" role="button">Details</div>
+  </div>
+</div>

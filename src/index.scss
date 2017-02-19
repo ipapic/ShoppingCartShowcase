@@ -1,0 +1,152 @@
+//common app styling
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+}
+
+.main-header {
+  flex: 0 0 50px;
+  z-index: 1000;
+  background: white;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.left-sidebar {
+  background: #eee;
+  flex-direction: column;
+  flex: 0 0 200px;
+}
+
+.central-content {
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.shadow-s {
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.11), 1px 2px 5px rgba(0, 0, 0, 0.23);
+}
+
+.shadow-m {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.21);
+}
+
+.shadow-long {
+  box-shadow: 0 -2px 37px rgba(0, 0, 0, 0.16), 0 -3px 14px rgba(0, 0, 0, 0.23);
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 2vw;
+  justify-items: flex-start;
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  flex: 0 0 300px;
+  padding: 8px;
+  margin: 5px;
+  .thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 0px;
+  }
+  .open-product {
+    align-self: flex-end;
+  }
+  .product-title {
+    text-align: center;
+  }
+  .price {
+    margin: 0px 4px 10px;
+    align-self: flex-end;
+  }
+}
+
+.product-thumb {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 0 0 150px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.paging {
+  align-self: stretch;
+  flex: 0 0 50px;
+  background: #52728a;
+  margin: 10px 20px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  > * {
+    margin: 0px 5px;
+  }
+  .select-sort {
+    flex: 0 1 200px;
+  }
+  .input-search {
+    flex: 0 1 150px;
+  }
+  .search-btn {
+    flex: 0 1 60px;
+  }
+}
+
+//overrides
+
+[uib-slide] .text-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.carousel-control {
+  opacity: 0;
+  &:hover, &:focus {
+    opacity: 0.4;
+  }
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.pagination {
+  flex: 0 0 auto;
+  margin: 0px 5px;
+}

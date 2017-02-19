@@ -1,0 +1,18 @@
+<div class="home-content">
+  <div class="title featured">Featured products:</div>
+  <div class="carousel-container">
+    <div uib-carousel active="0" interval="5000" no-wrap=false>
+      <div uib-slide ng-repeat="slidev in vm.featuredProductsSlides" index="$index">
+        <product-card product=product ng-repeat="product in slidev"></product-card>
+      </div>
+    </div>
+  </div>
+  <div class="title">Latest products:</div>
+  <div class="carousel-container">
+    <div uib-carousel active="0" interval="5000" no-wrap=false>
+      <div uib-slide ng-repeat="slidev in vm.latestProductsSlides" index="$index">
+        <product-card product=product ng-repeat="product in slidev"></product-card>
+      </div>
+    </div>
+  </div>
+</div>
